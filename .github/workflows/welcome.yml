@@ -1,0 +1,17 @@
+name: Welcome workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Say welcome
+        run: echo "Welcome! GitHub Actions is running successfully."
